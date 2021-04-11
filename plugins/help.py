@@ -9,10 +9,18 @@ async def start(client, update):
         text=Translation.WELCOME_TEXT.format(update.from_user.first_name),
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
-            [
-                [InlineKeyboardButton("OPTIONS", callback_data="help")]
-            ])
-    )
+		[
+			[
+				InlineKeyboardButton("😇Group", url="https://t.ME/VKP_BOTS"),
+				InlineKeyboardButton("Channel📣", url="https://t.me/VKPROJECTS")
+			],
+			[
+				InlineKeyboardButton("⚙️Help", callback_data="help"),
+				InlineKeyboardButton("Contact Dev👨🏻‍🎓", url="https://t.me/VIVEKTVP")
+			]
+		]
+	)
+)
 
 async def start_bot(client, update):
     await client.delete_messages(chat_id=update.message.chat.id, message_ids=update.message.message_id)
@@ -21,10 +29,18 @@ async def start_bot(client, update):
         text=Translation.WELCOME_TEXT.format(update.from_user.first_name),
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
-            [
-                [InlineKeyboardButton("OPTIONS", callback_data="help")]
-            ])
-    )
+		[
+			[
+				InlineKeyboardButton("😇Group", url="https://t.ME/VKP_BOTS"),
+				InlineKeyboardButton("Channel📣", url="https://t.me/VKPROJECTS")
+			],
+			[
+				InlineKeyboardButton("⚙️Help", callback_data="help"),
+				InlineKeyboardButton("Contact Dev👨🏻‍🎓", url="https://t.me/VIVEKTVP")
+			]
+		]
+	)
+)
 
 
 async def help_me(client, update):
